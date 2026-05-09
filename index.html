@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Overpass:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="parent-container">
+    <img src="images/logo.svg" alt="splitter" class="logo">
+
+  <div class="container">
+
+    <!-- left side input section -->
+     <section class="input-section">
+        <div class="input-group">
+          <label for="bill">Bill</label>
+          <div class="input-wrapper">
+            <input type="number" id="bill" step="0.01">
+          </div>  
+        </div>
+
+        <div class="tip-section">
+          <label>Select Tip %</label>
+          <div class="grid-button">
+            <button class="tip-btn">5%</button>
+            <button class="tip-btn">10%</button>
+            <button class="tip-btn">15%</button>
+            <button class="tip-btn">25%</button>
+            <button class="tip-btn">50%</button>
+            <input type="number" placeholder="Custom" class="custom-tip">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="people">Number of People</label>
+          <div class="input-wrapper">
+            <input type="number" id="people">
+          </div>
+        </div>
+     </section>
+
+
+     <!-- right side section -->
+      <section class="result-section">
+          <div class="result-row">
+              <div>
+                <h2>Tip Amount</h2>
+                <p>/ Person</p>
+              </div>
+              <div class="amount">$0.00</div>
+          </div>
+
+          <div class="result-row">
+            <div>
+              <h2>Total</h2>
+              <p>/ Person</p>
+            </div>
+            <div class="amount">$0.00</div>
+          </div>
+          <button id="reset" class="reset-btn">RESET</button>
+      </section>
+  </div>
+  </main>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

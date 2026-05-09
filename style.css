@@ -1,0 +1,142 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: hsl(185, 41%, 84%);
+  /* font-size: 24px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Space Mono", monospace;
+}
+.logo{
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+.container{
+  background-color: hsl(0, 100%, 100%);
+  padding: 32px;
+  border-radius: 25px;
+  display: flex;
+  gap: 40px;
+  max-width: 900px;
+  width: 100%;
+}
+label{
+  color: hsl(183, 100%, 15%);
+  display: block;
+  margin-bottom: 10px;
+  /* font-weight: bold; */
+}
+.input-section{
+  flex: 1;
+  padding: 10px;
+}
+input{
+  width: 100%;
+  background-color: hsl(189, 47%, 97%);
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: right;
+  font-size: 24px;
+  color: hsl(183, 100%, 15%);
+  font-weight: bold;
+}
+.grid-button{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 14px;
+  margin-bottom: 10px;
+}
+.tip-btn{
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 100%, 100%);
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.tip-btn:hover{
+  background-color: #26c2ad;
+  color: #00474b;
+}
+.tip-btn.active{
+  background-color: #26c2ad;
+  color: #00474b;
+}
+#bill{
+  text-align: right;
+  background-image: url("images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  padding-left: 35px;
+}
+#people{
+  text-align: right;
+  background-image: url("images/icon-person.svg");
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  padding-left: 35px;
+}
+
+/* Right side */
+.result-section{
+  flex: 1;
+  background-color: hsl(183, 100%, 15%);
+  padding: 40px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.result-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.result-row h2{
+  color: hsl(0, 100%, 100%);
+  font-size: 16px;
+  margin: 0;
+}
+.result-row p{
+  color: hsl(184, 14%, 56%);
+  font-size: 13px;
+  margin: 0;
+}
+.amount{
+  color: #26c2ad;
+  font-size: 40px;
+  font-weight: bold;
+}
+.reset-btn{
+  background-color: #26c2ad;
+  color: hsl(183, 100%, 15%);
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* media quairy */
+@media (max-width: 375px) {
+  .container{
+    flex-direction: column;
+    padding: 24px;
+  }
+  .result-section{
+    width: auto;
+  }
+}
