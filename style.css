@@ -6,76 +6,102 @@
 
 body {
   background-color: hsl(185, 41%, 84%);
+  font-family: "Space Mono", monospace;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
- 
-  font-family: "Space Mono", monospace;
+  padding: 20px;
+}
+
+.parent-container {
+  width: 100%;
+  max-width: 920px;
 }
 
 .logo {
   display: block;
-  margin: 0 auto;
-  margin-bottom: 40px;
+  margin: 0 auto 40px;
 }
 
 .container {
-  background-color: hsl(0, 0%, 100%);
+  background-color: white;
+  border-radius: 20px;
   padding: 32px;
-  border-radius: 25px;
   display: flex;
-  gap: 40px;
-  max-width: 900px;
-  width: 100%;
+  gap: 30px;
 }
 
-label {
-  color: hsl(183, 100%, 15%);
-  display: block;
-  margin-bottom: 10px;
-}
-
+/* Left Section */
 .input-section {
   flex: 1;
-  padding: 10px;
+}
+
+.input-group {
+  margin-bottom: 25px;
+}
+
+label,
+.tip-section p {
+  display: block;
+  color: hsl(186, 14%, 43%);
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 input {
   width: 100%;
-  background-color: hsl(189, 47%, 97%);
   border: none;
+  outline: none;
+  background-color: hsl(189, 47%, 97%);
+  padding: 12px;
   border-radius: 8px;
-  padding: 10px;
-  text-align: right;
   font-size: 24px;
-  color: hsl(183, 100%, 15%);
+  text-align: right;
   font-weight: bold;
-  font-family: "Space Mono", monospace; 
-  outline: none; 
+  color: hsl(183, 100%, 15%);
+  font-family: "Space Mono", monospace;
 }
 
 input:focus {
   outline: 2px solid hsl(172, 67%, 45%);
 }
 
+/* Bill icon */
+#bill {
+  background-image: url("./images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  padding-left: 35px;
+}
+
+/* People icon */
+#people {
+  background-image: url("./images/icon-person.svg");
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  padding-left: 35px;
+}
+
+/* Tip buttons */
 .grid-button {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 .tip-btn {
   background-color: hsl(183, 100%, 15%);
-  color: hsl(0, 0%, 100%); 
+  color: white;
   border: none;
   border-radius: 6px;
-  padding: 10px;
-  font-size: 20px;
-  cursor: pointer;
+  padding: 12px;
+  font-size: 22px;
   font-weight: bold;
-  font-family: "Space Mono", monospace; 
+  cursor: pointer;
+  font-family: "Space Mono", monospace;
 }
 
 .tip-btn:hover {
@@ -88,28 +114,17 @@ input:focus {
   color: hsl(183, 100%, 15%);
 }
 
-#bill {
-  text-align: right;
-  background-image: url("images/icon-dollar.svg");
-  background-repeat: no-repeat;
-  background-position: 15px center;
-  padding-left: 35px;
+.custom-tip {
+  text-align: center;
+  font-size: 20px;
 }
 
-#people {
-  text-align: right;
-  background-image: url("images/icon-person.svg");
-  background-repeat: no-repeat;
-  background-position: 15px center;
-  padding-left: 35px;
-}
-
-/* Right side */
+/* Right Section */
 .result-section {
   flex: 1;
   background-color: hsl(183, 100%, 15%);
-  padding: 40px;
   border-radius: 16px;
+  padding: 35px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -123,15 +138,13 @@ input:focus {
 }
 
 .result-row h2 {
-  color: hsl(0, 0%, 100%); 
+  color: white;
   font-size: 16px;
-  margin: 0;
 }
 
 .result-row p {
   color: hsl(184, 14%, 56%);
   font-size: 13px;
-  margin: 0;
 }
 
 .amount {
@@ -141,30 +154,44 @@ input:focus {
 }
 
 .reset-btn {
+  width: 100%;
   background-color: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
   border: none;
   border-radius: 8px;
-  width: 100%;
-  padding: 10px;
-  font-weight: bold;
+  padding: 12px;
   font-size: 18px;
+  font-weight: bold;
   cursor: pointer;
-  font-family: "Space Mono", monospace; 
+  font-family: "Space Mono", monospace;
 }
 
 .reset-btn:hover {
-  background-color: hsl(173, 61%, 77%); 
+  background-color: hsl(173, 61%, 77%);
 }
 
-/* Media Query */
-@media (max-width: 600px) { 
+/* Mobile */
+@media (max-width: 768px) {
   .container {
     flex-direction: column;
     padding: 24px;
   }
 
+  .amount {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 500px) {
+  .grid-button {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .container {
+    padding: 20px;
+  }
+
   .result-section {
-    width: auto;
+    padding: 25px;
   }
 }
