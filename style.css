@@ -171,7 +171,7 @@ input:focus {
 }
 
 /* Mobile */
-@media (max-width: 768px) {
+@media (max-width: 375px) {
   .container {
     flex-direction: column;
     padding: 24px;
@@ -182,16 +182,4 @@ input:focus {
   }
 }
 
-@media (max-width: 500px) {
-  .grid-button {
-    grid-template-columns: repeat(2, 1fr);
-  }
 
-  .container {
-    padding: 20px;
-  }
-
-  .result-section {
-    padding: 25px;
-  }
-}
